@@ -10,6 +10,12 @@ def get_filename(my_args):
         return ""
 
 
+def read_from_file_to_list(filename):
+    output = []
+    with open("input.txt","r") as file_to_read:
+        print(file_to_read.readlines())
+
+
 def main():
     my_args = list(sys.argv)
     filename = get_filename(my_args)
@@ -18,6 +24,7 @@ def main():
         return
     
     print(f"File to parse: {filename}")
+    read_from_file_to_list(filename)
     
 
 
