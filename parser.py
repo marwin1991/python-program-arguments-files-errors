@@ -1,9 +1,9 @@
 import sys
 
 
-def get_filename():
-    if len(sys.argv) >= 2:
-        filename = sys.argv[1]
+def get_filename(my_args):
+    if len(my_args) >= 2:
+        filename = my_args[1]
         return filename
     else:
         print("[ WARNING ] You should run this program by calling: python parser.py filename")
@@ -11,7 +11,8 @@ def get_filename():
 
 
 def main():
-    filename = get_filename()
+    my_args = list(sys.argv)
+    filename = get_filename(my_args)
 
     if len(filename) == 0:
         return
