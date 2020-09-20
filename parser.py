@@ -1,3 +1,7 @@
+#
+#   program usage: python parser.py data\input.txt my_output.txt
+#
+
 import sys
 
 NAME_INDEX = 0
@@ -32,6 +36,8 @@ def get_names(data_list):
 def generate_report(data_list):
     output = []
 
+    # inforamcja o pliku wejscowym
+    # inforamcja o pliku wyjscowym
     output.append(f"Ilosc danych {len(data_list)}")
     output.append(f"Imiona: {get_names(data_list)}")
 
