@@ -12,8 +12,13 @@ def get_filename(my_args):
 
 def read_from_file_to_list(filename):
     output = []
-    with open("input.txt","r") as file_to_read:
-        print(file_to_read.readlines())
+
+    with open(filename,"r") as file_to_read:
+        for line in file_to_read.readlines():
+            row = line.replace("\n","").split(" ")
+            output.append(row)
+    
+    return output
 
 
 def main():
@@ -24,12 +29,12 @@ def main():
         return
     
     print(f"File to parse: {filename}")
-    read_from_file_to_list(filename)
+    data_list = read_from_file_to_list(filename)
+    print(data_list)
     
 
 
 if __name__ == "__main__":
     main()
 
-dsfaf
 
