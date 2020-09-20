@@ -15,8 +15,7 @@ def get_filename(my_args):
         filename = my_args[1]
         return filename
     else:
-        print("[ WARNING ] You should run this program by calling: python parser.py filename")
-        return ""
+        raise ValueError("[ WARNING ] You should run this program by calling: python parser.py filename")
 
 def read_from_file_to_list(filename):
     output = []
@@ -53,9 +52,11 @@ def save_report_to_file(report, filename):
 
 def main():
     my_args = list(sys.argv)
-    filename = get_filename(my_args)
 
-    if len(filename) == 0:
+    try:
+        filename = get_filename(my_args)
+    except ValueError as error:
+        print(error)
         return
     
     print(f"File to parse: {filename}")
