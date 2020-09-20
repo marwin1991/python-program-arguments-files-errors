@@ -2,6 +2,9 @@
 #   program usage: python parser.py data\input.txt my_output.txt
 #
 
+###
+
+
 import sys
 
 NAME_INDEX = 0
