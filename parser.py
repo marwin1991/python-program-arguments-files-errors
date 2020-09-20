@@ -2,7 +2,7 @@
 #   program usage: python parser.py data\input.txt my_output.txt
 #
 
-###
+###aaa
 
 
 import sys
