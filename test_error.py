@@ -11,7 +11,6 @@ def my_postivie_add(a, b):
     return a + b
         
 
-
 try:
     result = my_postivie_add(-1, 6)
     print(result)
